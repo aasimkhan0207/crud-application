@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p> <a href="/"> Home </a></p>
+    <a href="{% url 'logout' %}">logout</a>
+    <center> <h2>Employee Details</h2> </center>
+    <table>
+      <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+      </tr>
+      {% for employee in employees %}
+      <tr>
+        <td>{{ employee.eid }}</td>
+        <td>{{ employee.ename }}</td>
+
+
+
+        {% if request.user.is_superuser %}
+        <td>
+          <a href="/edit/{{ employee.id }}">Edit</a>
+          <a href="/delete/{{ employee.id }}">Delete</a>
+        </td>
+        {% endif %}
+
+      </tr>
+
+      {% endfor %}
+    </table>
+
+    {% if request.user.is_superuser %}
+    <center><a href="/emp">Add new employee</a>
+    {% endif %}
+
+
+
+  </body>
+</html>

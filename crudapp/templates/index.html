@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <form action="/emp" method="POST">
+  {% csrf_token %}
+  <h3>Enter Details</h3>
+
+  <label>Employee ID: </label>
+    {{ form.eid }}
+
+  <label>Employee Name: </label>
+    {{ form.ename }}
+
+  <button type="submit" name="button">Submit</button>
+    </form>
+  </body>
+</html>
