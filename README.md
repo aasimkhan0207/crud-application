@@ -1,6 +1,19 @@
-# crud-application unit testing
+# crud-application 
 
-## installation
+### installation
+```bash
+pip install django==2.2.5
+```
+
+### Usage
+run ```python manage.py runserver ``` using command line inside project directory.
+
+open http://localhost:8000/ 
+
+
+## unit testing
+
+### installation
 
 ```bash
 pip install pytest
@@ -18,7 +31,7 @@ pip install pytest-cov
 pip install mixer
 ```
 
-## Usage
+### Usage
 
 run ```py.test ``` using command line inside project directory.
 
