@@ -22,4 +22,4 @@ pip install mixer
 
 run ```py.test ``` using command line inside project directory.
 
-For report run ```pytest```, it creates a new folder    containing file index.html
+For report run ```pytest```, it creates a new folder ```htmlcov``` containing file index.html
